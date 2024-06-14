@@ -59,10 +59,10 @@ tokenized_datasets.set_format(type='torch', columns=['input_ids', 'attention_mas
 # Define training arguments
 training_args = TrainingArguments(
     output_dir="./results",
-    evaluation_strategy="epoch",
+    evaluation_strategy="no",
     learning_rate=2e-5,
-    per_device_train_batch_size=8,
-    per_device_eval_batch_size=8,
+    per_device_train_batch_size=1,
+    per_device_eval_batch_size=1,
     num_train_epochs=3,
     weight_decay=0.01,
 )
